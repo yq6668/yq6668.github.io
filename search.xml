@@ -3,8 +3,13 @@
   <entry>
     <title>blog</title>
     <url>/2021/09/10/blog/</url>
-    <content><![CDATA[<p>my blog</p>
-<p><img src="/.com//ys.jpg" alt="ys"></p>
+    <content><![CDATA[<h1 id="my-blog"><a href="#my-blog" class="headerlink" title="my blog"></a>my blog</h1><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hhhhhhh</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="b"><a href="#b" class="headerlink" title="b"></a>b</h1><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">dddd</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2021/09/10/blog/ys.jpg"></p>
 <span id="more"></span>
 
 <p>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
