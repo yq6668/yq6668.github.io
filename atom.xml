@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一缕清风</title>
+  
+  <subtitle>记录学习生活的点点滴滴</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-09-10T07:07:12.295Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>尹奇</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blog</title>
+    <link href="http://example.com/2021/09/10/blog/"/>
+    <id>http://example.com/2021/09/10/blog/</id>
+    <published>2021-09-10T06:16:33.000Z</published>
+    <updated>2021-09-10T07:07:12.295Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;my blog&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/.com//ys.jpg&quot; alt=&quot;ys&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="分享" scheme="http://example.com/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+  </entry>
+  
+</feed>
