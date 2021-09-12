@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>blog</title>
-    <url>/2021/09/10/blog/</url>
-    <content><![CDATA[<h1 id="my-blog"><a href="#my-blog" class="headerlink" title="my blog"></a>my blog</h1><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hhhhhhh</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="b"><a href="#b" class="headerlink" title="b"></a>b</h1><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">dddd</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="/2021/09/10/blog/ys.jpg"></p>
+    <title>面向对象游戏贪吃蛇</title>
+    <url>/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/</url>
+    <content><![CDATA[<p>在学习的过程中了解到如何用构造函数创建对象和用原型方法来做小游戏。先上图：</p>
+<p><img src="/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.jpg"></p>
 <span id="more"></span>
 
-<p>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+
+
 ]]></content>
       <categories>
-        <category>分享</category>
+        <category>js小游戏</category>
       </categories>
       <tags>
         <tag>css</tag>
+        <tag>html</tag>
+        <tag>JavaScrip</tag>
       </tags>
   </entry>
 </search>

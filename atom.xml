@@ -6,7 +6,7 @@
   <link href="https://yq6668.github.io/atom.xml" rel="self"/>
   
   <link href="https://yq6668.github.io/"/>
-  <updated>2021-09-10T07:41:58.565Z</updated>
+  <updated>2021-09-12T12:59:25.732Z</updated>
   <id>https://yq6668.github.io/</id>
   
   <author>
@@ -17,27 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>blog</title>
-    <link href="https://yq6668.github.io/2021/09/10/blog/"/>
-    <id>https://yq6668.github.io/2021/09/10/blog/</id>
+    <title>面向对象游戏贪吃蛇</title>
+    <link href="https://yq6668.github.io/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/"/>
+    <id>https://yq6668.github.io/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/</id>
     <published>2021-09-10T06:16:33.000Z</published>
-    <updated>2021-09-10T07:41:58.565Z</updated>
+    <updated>2021-09-12T12:59:25.732Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;my-blog&quot;&gt;&lt;a href=&quot;#my-blog&quot; class=&quot;headerlink&quot; title=&quot;my blog&quot;&gt;&lt;/a&gt;my blog&lt;/h1&gt;&lt;figure class=&quot;highlight ebnf&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;hhhhhhh&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h1 id=&quot;b&quot;&gt;&lt;a href=&quot;#b&quot; class=&quot;headerlink&quot; title=&quot;b&quot;&gt;&lt;/a&gt;b&lt;/h1&gt;&lt;figure class=&quot;highlight ebnf&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;dddd&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
-
-&lt;p&gt;&lt;img src=&quot;/2021/09/10/blog/ys.jpg&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;在学习的过程中了解到如何用构造函数创建对象和用原型方法来做小游戏。先上图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.jpg&quot;&gt;&lt;/p&gt;</summary>
     
     
     
-    <category term="分享" scheme="https://yq6668.github.io/categories/%E5%88%86%E4%BA%AB/"/>
+    <category term="js小游戏" scheme="https://yq6668.github.io/categories/js%E5%B0%8F%E6%B8%B8%E6%88%8F/"/>
     
     
     <category term="css" scheme="https://yq6668.github.io/tags/css/"/>
+    
+    <category term="html" scheme="https://yq6668.github.io/tags/html/"/>
+    
+    <category term="JavaScrip" scheme="https://yq6668.github.io/tags/JavaScrip/"/>
     
   </entry>
   
