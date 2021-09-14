@@ -6,7 +6,7 @@
   <link href="https://yq6668.github.io/atom.xml" rel="self"/>
   
   <link href="https://yq6668.github.io/"/>
-  <updated>2021-09-12T13:49:56.933Z</updated>
+  <updated>2021-09-14T13:29:28.687Z</updated>
   <id>https://yq6668.github.io/</id>
   
   <author>
@@ -17,15 +17,17 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>面向对象游戏贪吃蛇</title>
+    <title>js小游戏贪吃蛇</title>
     <link href="https://yq6668.github.io/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/"/>
     <id>https://yq6668.github.io/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/</id>
     <published>2021-09-10T06:16:33.000Z</published>
-    <updated>2021-09-12T13:49:56.933Z</updated>
+    <updated>2021-09-14T13:29:28.687Z</updated>
     
     
     <summary type="html">&lt;p&gt;在学习的过程中了解到如何用构造函数创建对象和用原型方法来做小游戏，总共构造了三个对象。先上图：&lt;/p&gt;
-&lt;img src=&quot;/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.png&quot; style=&quot;zoom:75%; float:left;&quot;&gt;</summary>
+&lt;img src=&quot;/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.png&quot; style=&quot;zoom:50%;&quot;&gt;
+
+&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;</summary>
     
     
     
