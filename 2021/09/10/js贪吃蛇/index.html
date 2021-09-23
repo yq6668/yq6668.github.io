@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://yq6668.github.io/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.png">
 <meta property="og:image" content="https://yq6668.github.io/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/start.png">
 <meta property="article:published_time" content="2021-09-10T06:16:33.000Z">
-<meta property="article:modified_time" content="2021-09-14T13:29:28.687Z">
+<meta property="article:modified_time" content="2021-09-23T13:47:05.225Z">
 <meta property="article:author" content="尹奇">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="css">
@@ -405,7 +405,7 @@
 
       
         <p>在学习的过程中了解到如何用构造函数创建对象和用原型方法来做小游戏，总共构造了三个对象。先上图：</p>
-<img src="/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.png" style="zoom:50%;">
+<img src="/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.png" style="zoom:80%;">
 
 <div style="clear:both;"></div>
 
@@ -493,13 +493,13 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> map = <span class="built_in">document</span>.getElementById(<span class="string">&quot;map&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> map2 = <span class="built_in">document</span>.getElementById(<span class="string">&quot;map2&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> over = <span class="built_in">document</span>.getElementById(<span class="string">&quot;gameover&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> start = <span class="built_in">document</span>.getElementById(<span class="string">&quot;startGame&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> background = <span class="built_in">document</span>.getElementById(<span class="string">&quot;background&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> game = <span class="keyword">new</span> Game();</span><br><span class="line">    start.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      game.startGame();</span><br><span class="line">      auto();</span><br><span class="line">      over.style.display = <span class="string">&quot;none&quot;</span>;</span><br><span class="line">      background.style.display = <span class="string">&quot;none&quot;</span>;</span><br><span class="line">      map2.style.display = <span class="string">&quot;none&quot;</span>;</span><br><span class="line">      </span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> pause = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.pause&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> sr = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.src&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> inp = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.inp&quot;</span>);</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">    pause.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (a == <span class="number">0</span>) &#123;</span><br><span class="line">        sr.src = <span class="string">&quot;images/pause.png&quot;</span>;</span><br><span class="line">        a = <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(inp.value);</span><br><span class="line">        game.time(inp.value);</span><br><span class="line">        auto();</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        sr.src = <span class="string">&quot;images/start.png&quot;</span>;</span><br><span class="line">        a = <span class="number">0</span>;</span><br><span class="line">        game.pausee();</span><br><span class="line">        <span class="built_in">console</span>.log(spin);</span><br><span class="line">        <span class="built_in">clearInterval</span>(spin);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> spin=<span class="literal">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">auto</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      spin=<span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        sr.style.transform=<span class="string">&quot;rotate(&quot;</span>+i+<span class="string">&quot;deg)&quot;</span></span><br><span class="line">        sr.style.transition=<span class="string">&quot;all 1s&quot;</span>;</span><br><span class="line">        i+=<span class="number">60</span>;</span><br><span class="line">      &#125;,<span class="number">1000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 
 <p>为了方便使用和修改，所以对三个对象分别用自调用函数进行了封装。成品和源代码地址如下：</p>
-<img src="/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.png" style="zoom:50%;">
+<img src="/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/tc.png" style="zoom:80%;">
 
-<img src="/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/start.png" style="zoom:50%;">
+<img src="/2021/09/10/js%E8%B4%AA%E5%90%83%E8%9B%87/start.png" style="zoom:80%;">
 
 <div style="clear:both;"></div>
 
-<p>源代码地址：<a target="_blank" rel="noopener" href="https://github.com/yq6668/code.git">https://github.com/yq6668/code.git</a></p>
+<p>源代码地址：<a target="_blank" rel="noopener" href="https://github.com/yq6668/code">https://github.com/yq6668/code</a></p>
 
       
     </div>
@@ -541,6 +541,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/09/23/canvas%E8%B4%AA%E5%90%83%E8%9B%87/" rel="prev" title="canvas贪吃蛇">
+                canvas贪吃蛇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -618,7 +634,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -640,7 +656,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -661,13 +677,13 @@
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
-                    <a href="https://yq6668.github.io" target="_blank" title="GitHub">
+                    <a href="https://github.com/yq6668/code.git" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="mailto:a2360675150@gmail.com" target="_blank" title="E-Mail">
+                    <a href="mailto:a2360675250@gmail.com" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
