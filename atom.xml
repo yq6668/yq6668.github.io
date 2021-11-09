@@ -6,7 +6,7 @@
   <link href="https://yq6668.github.io/atom.xml" rel="self"/>
   
   <link href="https://yq6668.github.io/"/>
-  <updated>2021-09-23T13:46:29.554Z</updated>
+  <updated>2021-11-09T07:32:19.017Z</updated>
   <id>https://yq6668.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>websocket</title>
+    <link href="https://yq6668.github.io/2021/10/15/ws/"/>
+    <id>https://yq6668.github.io/2021/10/15/ws/</id>
+    <published>2021-10-15T10:38:11.000Z</published>
+    <updated>2021-11-09T07:32:19.017Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;1-websocket介绍&quot;&gt;&lt;a href=&quot;#1-websocket介绍&quot; class=&quot;headerlink&quot; title=&quot;1.websocket介绍&quot;&gt;&lt;/a&gt;1.websocket介绍&lt;/h1&gt;&lt;h2 id=&quot;1-1-简介&quot;&gt;&lt;a href=&quot;#1-1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.1.简介&quot;&gt;&lt;/a&gt;1.1.简介&lt;/h2&gt;&lt;p&gt;WebSocket 协议在2008年诞生，2011年成为国际标准。所有浏览器都已经支持了。&lt;/p&gt;
+&lt;p&gt;它的最大特点就是，服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，属于 服务器推送技术 的一种。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;WebSocket使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在WebSocket API中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基于TCP的全双工通信协议&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="websocket" scheme="https://yq6668.github.io/categories/websocket/"/>
+    
+    
+    <category term="websocket" scheme="https://yq6668.github.io/tags/websocket/"/>
+    
+    <category term="javascrip" scheme="https://yq6668.github.io/tags/javascrip/"/>
+    
+  </entry>
   
   <entry>
     <title>canvas贪吃蛇</title>
@@ -53,11 +81,11 @@
     <category term="js小游戏" scheme="https://yq6668.github.io/categories/js%E5%B0%8F%E6%B8%B8%E6%88%8F/"/>
     
     
+    <category term="JavaScrip" scheme="https://yq6668.github.io/tags/JavaScrip/"/>
+    
     <category term="html" scheme="https://yq6668.github.io/tags/html/"/>
     
     <category term="css" scheme="https://yq6668.github.io/tags/css/"/>
-    
-    <category term="JavaScrip" scheme="https://yq6668.github.io/tags/JavaScrip/"/>
     
   </entry>
   
