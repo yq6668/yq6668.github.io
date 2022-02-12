@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>BFC</title>
+    <url>/2021/06/12/BFC/</url>
+    <content><![CDATA[<h2 id="1-BFC-块级格式化上下文"><a href="#1-BFC-块级格式化上下文" class="headerlink" title="1.BFC(块级格式化上下文)"></a>1.BFC(块级格式化上下文)</h2><p>BFC(Block formatting context)</p>
+<p>直译为”块级格式化上下文”。它是一个独立的渲染区域，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。</p>
+<span id="more"></span>
+
+<h3 id="1-1-什么情况下可以让元素产生BFC"><a href="#1-1-什么情况下可以让元素产生BFC" class="headerlink" title="1.1 什么情况下可以让元素产生BFC"></a>1.1 什么情况下可以让元素产生BFC</h3><figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>根元素</span><br><span class="line"><span class="number">2.f</span>loat属性不为none</span><br><span class="line"><span class="number">3.</span>position为absolute或fixed</span><br><span class="line"><span class="number">4.</span>display为<span class="keyword">inline</span>-block, table-cell, table-caption, flex, <span class="keyword">inline</span>-flex</span><br><span class="line"><span class="number">5.</span>overflow不为visible。</span><br><span class="line"></span><br><span class="line">但其中，最常见的就是overflow:hidden、<span class="keyword">float</span>:left/right、position:absolute。也就是说每次看到这些属性的时候，就代表了该元素以及创建了一个BFC了。</span><br><span class="line"></span><br><span class="line">注意其他的，display属性，比如 line 等等，他们创建的是 IFC ，我们暂且不研究。</span><br></pre></td></tr></table></figure>
+
+<p>虽然添加上述的任意一条都能创建BFC，但会有一些副作用：</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="selector-class">.display</span>: <span class="selector-tag">table</span> 可能引发响应性问题</span><br><span class="line"><span class="number">2</span><span class="selector-class">.overflow</span>: scroll 可能产生多余的滚动条</span><br><span class="line"><span class="number">3</span><span class="selector-class">.float</span>: <span class="attribute">left</span> 将把元素移至左侧，并被其他元素环绕</span><br><span class="line"><span class="number">4</span><span class="selector-class">.overflow</span>: hidden 将裁切溢出元素</span><br></pre></td></tr></table></figure>
+
+<p>在实际开发中，我们一般通过overflow:hidden来开启BFC</p>
+<h3 id="1-2-BFC元素所具有的特性"><a href="#1-2-BFC元素所具有的特性" class="headerlink" title="1.2 BFC元素所具有的特性"></a>1.2 BFC元素所具有的特性</h3><p>BFC布局规则特性：</p>
+<p>1.在BFC中，盒子从顶端开始垂直地一个接一个地排列.</p>
+<p>2.盒子垂直方向的距离由margin决定。属于同一个BFC的两个相邻盒子的margin会发生重叠</p>
+<p>3.在BFC中，每一个盒子的左外边缘（margin-left）会触碰到容器的左边缘(border-left)（对于从右到左的格式来说，则触碰到右边缘）。</p>
+<p>4.BFC的区域不会与浮动盒子产生交集，而是紧贴浮动边缘。</p>
+<p>5.计算BFC的高度时，自然也会检测浮动或者定位的盒子高度。</p>
+<p>6.BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面元素，反之亦然</p>
+<h3 id="1-3-BFC的主要用途"><a href="#1-3-BFC的主要用途" class="headerlink" title="1.3 BFC的主要用途"></a>1.3 BFC的主要用途</h3><p>BFC能用来做什么？</p>
+<p>(1) 清除元素内部浮动</p>
+<p>只要把父元素设为BFC就可以清理子元素的浮动了，最常见的用法就是在父元素上设置overflow: hidden样式，对于IE6加上zoom:1就可以了。</p>
+<p>主要用到 </p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">计算BFC的高度时，自然也会检测浮动或者定位的盒子高度。</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/06/12/BFC/BFC%5Cfu.jpg"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;par&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;child&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;child&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    </span><br><span class="line"><span class="selector-class">.par</span> &#123;</span><br><span class="line">     <span class="attribute">overflow</span>: hidden;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#fcc</span>;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#f66</span>;</span><br><span class="line">     <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">     <span class="attribute">float</span>: left;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>(2) 解决外边距合并问题</p>
+<p>外边距合并的问题。</p>
+<p>主要用到 </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">盒子垂直方向的距离由<span class="attribute">margin</span>决定。属于同一个BFC的两个相邻盒子的<span class="attribute">margin</span>会发生重叠</span><br></pre></td></tr></table></figure>
+
+<p>属于同一个BFC的两个相邻盒子的margin会发生重叠，那么我们创建不属于同一个BFC，就不会发生margin重叠了。</p>
+<p><img src="/2021/06/12/BFC/BFC%5Cma.png"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">p</span>&gt;Haha&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;wrap&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">p</span>&gt;Hehe&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-class">.wrap</span> &#123;</span><br><span class="line">        <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">p</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#f55</span>;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#fcc</span>;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">text-align</span>:center;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>(3) 制作右侧自适应的盒子问题</p>
+<p>主要用到 </p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">BFC的区域不会与浮动盒子产生交集，而是紧贴浮动边缘。</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/06/12/BFC/BFC%5Cyou.png"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;<span class="selector-tag">aside</span>&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;<span class="selector-tag">main</span>&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">        <span class="attribute">position</span>: relative;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="selector-class">.aside</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#f66</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="selector-class">.main</span> &#123;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#fcc</span>;</span><br><span class="line">        <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>(4) 消除子元素浮动对父元素的兄弟的文字布局产生的影响</p>
+<p>​    当浮动的子元素的高度大于父亲的高度的时候，此时会对父亲后面的兄弟中文字布局产生影响，父亲后面兄弟中的文字会贴着浮动的子元素后面进行布局。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">   <span class="selector-class">.parent</span>&#123;</span></span><br><span class="line"><span class="css">       <span class="attribute">width</span>:<span class="number">300px</span>;</span></span><br><span class="line"><span class="css">       <span class="attribute">height</span>:<span class="number">300px</span>;</span></span><br><span class="line"><span class="css">       <span class="attribute">background</span>:yellow;</span></span><br><span class="line"><span class="css">       <span class="attribute">overflow</span>:hidden;<span class="comment">/*开启BFC，彻底消除parent里面元素对外面布局产生的影响*/</span></span></span><br><span class="line"><span class="css">   &#125;</span></span><br><span class="line"><span class="css">   </span></span><br><span class="line"><span class="css">   <span class="selector-class">.parent</span> <span class="selector-class">.child</span>&#123;</span></span><br><span class="line"><span class="css">       <span class="attribute">float</span><span class="selector-pseudo">:left</span>;</span></span><br><span class="line"><span class="css">       <span class="attribute">height</span>:<span class="number">350px</span>;</span></span><br><span class="line"><span class="css">   &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;parent&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;child&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  	你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  	你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  	你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-BFC-总结"><a href="#1-4-BFC-总结" class="headerlink" title="1.4 BFC 总结"></a>1.4 BFC 总结</h3><p>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。包括浮动，和外边距合并等等。</p>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>canvas贪吃蛇</title>
     <url>/2021/09/23/canvas%E8%B4%AA%E5%90%83%E8%9B%87/</url>
     <content><![CDATA[<img src="/2021/09/23/canvas%E8%B4%AA%E5%90%83%E8%9B%87/tc.png" style="zoom:67%;">
@@ -22,6 +81,93 @@
       <tags>
         <tag>JavaScrip</tag>
         <tag>canvas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>date格式化</title>
+    <url>/2021/06/08/date%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="1-格式化日期对象"><a href="#1-格式化日期对象" class="headerlink" title="1. 格式化日期对象"></a>1. 格式化日期对象</h2><p>格式化日期对象，返回yyyy-MM-dd HH:mm:ss的形式</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatDate</span>(<span class="params">d</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//如果date不是日期对象，返回</span></span><br><span class="line">  <span class="keyword">if</span> (!date <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> year = d.getFullYear(),</span><br><span class="line">      month = d.getMonth() + <span class="number">1</span>, </span><br><span class="line">      date = d.getDate(), </span><br><span class="line">      hour = d.getHours(), </span><br><span class="line">      minute = d.getMinutes(), </span><br><span class="line">      second = d.getSeconds();</span><br><span class="line">  month = month &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + month : month;</span><br><span class="line">  date = date &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + date : date;</span><br><span class="line">  hour = hour &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + hour : hour;</span><br><span class="line">  minute = minute &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + minute:minute;</span><br><span class="line">  second = second &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + second:second;</span><br><span class="line">  <span class="keyword">return</span> year + <span class="string">&#x27;-&#x27;</span> + month + <span class="string">&#x27;-&#x27;</span> + date + <span class="string">&#x27; &#x27;</span> + hour + <span class="string">&#x27;:&#x27;</span> + minute + <span class="string">&#x27;:&#x27;</span> + second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>计算时间差，返回相差的天/时/分/秒</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//作用求两个日期时间的时间间隔</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSpaceBetweenDate</span>(<span class="params">date1,date2</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.得到两个日期之间的秒数</span></span><br><span class="line">    <span class="keyword">var</span> between = <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.abs(date1 - date2)/<span class="number">1000</span>);</span><br><span class="line">    <span class="comment">//2.把秒数转换成相差多少天  多少小时  多少分钟  多少秒</span></span><br><span class="line">    <span class="keyword">var</span> day = <span class="built_in">Math</span>.floor(between/(<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>));</span><br><span class="line">    <span class="keyword">var</span> hour =  <span class="built_in">Math</span>.floor(between/<span class="number">60</span>/<span class="number">60</span>) % <span class="number">24</span>;</span><br><span class="line">    <span class="keyword">var</span> minute = <span class="built_in">Math</span>.floor(between/<span class="number">60</span>)%<span class="number">60</span>;</span><br><span class="line">    <span class="keyword">var</span> second = between%<span class="number">60</span>;</span><br><span class="line">    <span class="comment">//3.包装一个对象返回</span></span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="attr">day</span>:day,</span><br><span class="line">        <span class="attr">hour</span>:hour,</span><br><span class="line">        <span class="attr">minute</span>:minute,</span><br><span class="line">        <span class="attr">second</span>:second</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> date1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2017-8-8 22:23:23&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> date2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2017-10-8 23:30:30&quot;</span>);</span><br><span class="line"><span class="comment">//使用自己写的方法求两个时间的差</span></span><br><span class="line"><span class="keyword">var</span> o = getSpaceBetweenDate(date1,date2);</span><br><span class="line"><span class="built_in">console</span>.log(o);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>fetch-cookie</title>
+    <url>/2021/07/23/fetch-cookie/</url>
+    <content><![CDATA[<h2 id="fetch发送请求携带cookie"><a href="#fetch发送请求携带cookie" class="headerlink" title="fetch发送请求携带cookie"></a>fetch发送请求携带cookie</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">const result = fetch(url, &#123;</span><br><span class="line">        <span class="regexp">//</span>fetch不管在同域还是在跨域的情况下，默认都不携带cookie的，所以那些需要权限验证的请求就         无法正常获取到数据，这时候需要配置credentials项，有一下三个选项可添：</span><br><span class="line">        <span class="regexp">//</span>credentials:omit        默认值，忽略cookie的发送</span><br><span class="line">        <span class="regexp">//</span>credentials:same-origin 同源情况会发送cookie</span><br><span class="line">        <span class="regexp">//</span>credentials:include     表示既可以同域发送，也可以跨域发送</span><br><span class="line">        credentials: <span class="string">&#x27;include&#x27;</span>,</span><br><span class="line">        headers: &#123;</span><br><span class="line">            <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;application/json, text/plain, */*&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js类型判断</title>
+    <url>/2021/06/15/js%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/</url>
+    <content><![CDATA[<h2 id="1-js类型判断"><a href="#1-js类型判断" class="headerlink" title="1. js类型判断"></a>1. js类型判断</h2><h3 id="1-1-js中的数据类型"><a href="#1-1-js中的数据类型" class="headerlink" title="1.1 js中的数据类型"></a>1.1 js中的数据类型</h3><p>基本数据类型：Undefined、Null、Boolean、Number、String，Symbol</p>
+<p>引用数据类型 ：Object</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> bool = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span>  und= <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">let</span> nul = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">&#x27;xiaoming&#x27;</span>,<span class="attr">age</span>:<span class="number">22</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> fun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;hello&#x27;</span>)&#125;;</span><br><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-typeof"><a href="#1-2-typeof" class="headerlink" title="1.2 typeof"></a>1.2 typeof</h3><figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> bool); <span class="comment">//boolean</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num);<span class="comment">//number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);<span class="comment">//string</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> und);<span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> nul);<span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> arr);<span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj);<span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fun);<span class="comment">//function</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> s1); <span class="comment">//symbol</span></span><br></pre></td></tr></table></figure>
+
+<p>typeof可以识别出基本类型boolean,number,undefined,string,symbol，但是不能识别null。不能识别引用数据类型，会把null、array、object统一归为object类型,但是可以识别出function。<br> 所以typeof可以用来识别一些基本类型。</p>
+<h3 id="1-3-instanceof"><a href="#1-3-instanceof" class="headerlink" title="1.3 instanceof"></a>1.3 instanceof</h3><figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(bool <span class="keyword">instanceof</span> <span class="built_in">Boolean</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(num <span class="keyword">instanceof</span> <span class="built_in">Number</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(str <span class="keyword">instanceof</span> <span class="built_in">String</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(und <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(nul <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>);<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(obj <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(fun <span class="keyword">instanceof</span> <span class="built_in">Function</span>);<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(s1 <span class="keyword">instanceof</span> <span class="built_in">Symbol</span>);<span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>从结果中看出instanceof不能识别出基本的数据类型 number、boolean、string、undefined、unll、symbol。</p>
+<p>但是可以检测出引用类型，如array、object、function，同时对于是使用new声明的类型，它还可以检测出多层继承关系。</p>
+<p>其实也很好理解，js的继承都是采用原型链来继承的。比如objA instanceof A ，其实就是看objA的原型链上是否有A的原型，而A的原型上保留A的constructor属性。<br>所以instanceof一般用来检测对象类型，以及继承关系。</p>
+<h3 id="1-4-constructor"><a href="#1-4-constructor" class="headerlink" title="1.4 constructor"></a>1.4 constructor</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(bool.constructor === Boolean);// true</span><br><span class="line">console.log(num.constructor === Number);// true</span><br><span class="line">console.log(str.constructor === String);// true</span><br><span class="line">console.log(arr.constructor === Array);// true</span><br><span class="line">console.log(obj.constructor === Object);// true</span><br><span class="line">console.log(fun.constructor === Function);// true</span><br><span class="line">console.log(s1.constructor === Symbol);//true</span><br></pre></td></tr></table></figure>
+
+<p>null、undefined没有construstor方法，因此constructor不能判断undefined和null。<br> 但是他是不安全的，因为contructor的指向是可以被改变。</p>
+<h3 id="1-5-Object-prototype-toString-call"><a href="#1-5-Object-prototype-toString-call" class="headerlink" title="1.5 Object.prototype.toString.call"></a>1.5 Object.prototype.toString.call</h3><figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(bool));<span class="comment">//[object Boolean]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(num));<span class="comment">//[object Number]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(str));<span class="comment">//[object String]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(und));<span class="comment">//[object Undefined]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(nul));<span class="comment">//[object Null]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(arr));<span class="comment">//[object Array]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(obj));<span class="comment">//[object Object]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(fun));<span class="comment">//[object Function]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(s1)); <span class="comment">//[object Symbol]</span></span><br></pre></td></tr></table></figure>
+
+<p>此方法可以相对较全的判断js的数据类型。</p>
+<p>至于在项目中使用哪个判断，还是要看使用场景，具体的选择，一般基本的类型可以选择typeof，引用类型可以使用instanceof。</p>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mongodb导入导出</title>
+    <url>/2021/06/22/mongodb%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</url>
+    <content><![CDATA[<h2 id="1-MongoDB的导入导出"><a href="#1-MongoDB的导入导出" class="headerlink" title="1.MongoDB的导入导出"></a>1.MongoDB的导入导出</h2><h3 id="1-1-MongoDB的导出功能"><a href="#1-1-MongoDB的导出功能" class="headerlink" title="1.1 MongoDB的导出功能"></a>1.1 MongoDB的导出功能</h3><h4 id="1-1-1-导出单个文件"><a href="#1-1-1-导出单个文件" class="headerlink" title="1.1.1 导出单个文件"></a>1.1.1 导出单个文件</h4><p>mongodb提供了导入和导出的功能，分别是MongoDB下载目录下的mongoexport.exe和mongoimport.exe文件 ，具体的导出命令格式如下：　　　　</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mongoexport -h dbhost -d dbname -c collectionName -o output</span></span><br></pre></td></tr></table></figure>
+
+<p>参数说明:</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导出的集合</span></span><br><span class="line"><span class="deletion">-o 指明要导出的文件名   文件支持多种格式，如txt,wps,xls等</span></span><br></pre></td></tr></table></figure>
+
+<p>具体示例：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h4 id="1-1-2-导出整个集合"><a href="#1-1-2-导出整个集合" class="headerlink" title="1.1.2 导出整个集合"></a>1.1.2 导出整个集合</h4><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mongodump</span> -h localhost:<span class="number">27017</span> -d xx -o D:\test\</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2-MongoDB的导入功能"><a href="#1-2-MongoDB的导入功能" class="headerlink" title="1.2 MongoDB的导入功能"></a>1.2 MongoDB的导入功能</h3><p>导入数据可以使用命令：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">mongoimport -h dbhost -d dbname -c collectionname <span class="selector-tag">input</span></span><br></pre></td></tr></table></figure>
+
+<p>参数说明:</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导入的集合   mongodb本身支持隐式创建，故事先无需创建集合  </span></span><br><span class="line">input 文件的地址</span><br></pre></td></tr></table></figure>
+
+<p>具体示例：　</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>mongodb</category>
+      </categories>
+      <tags>
+        <tag>mongodb</tag>
       </tags>
   </entry>
   <entry>
@@ -167,115 +313,6 @@
       <tags>
         <tag>JavaScrip</tag>
         <tag>websocket</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BFC</title>
-    <url>/2021/06/12/BFC/</url>
-    <content><![CDATA[<h2 id="1-BFC-块级格式化上下文"><a href="#1-BFC-块级格式化上下文" class="headerlink" title="1.BFC(块级格式化上下文)"></a>1.BFC(块级格式化上下文)</h2><p>BFC(Block formatting context)</p>
-<p>直译为”块级格式化上下文”。它是一个独立的渲染区域，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。</p>
-<span id="more"></span>
-
-<h3 id="1-1-什么情况下可以让元素产生BFC"><a href="#1-1-什么情况下可以让元素产生BFC" class="headerlink" title="1.1 什么情况下可以让元素产生BFC"></a>1.1 什么情况下可以让元素产生BFC</h3><figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>根元素</span><br><span class="line"><span class="number">2.f</span>loat属性不为none</span><br><span class="line"><span class="number">3.</span>position为absolute或fixed</span><br><span class="line"><span class="number">4.</span>display为<span class="keyword">inline</span>-block, table-cell, table-caption, flex, <span class="keyword">inline</span>-flex</span><br><span class="line"><span class="number">5.</span>overflow不为visible。</span><br><span class="line"></span><br><span class="line">但其中，最常见的就是overflow:hidden、<span class="keyword">float</span>:left/right、position:absolute。也就是说每次看到这些属性的时候，就代表了该元素以及创建了一个BFC了。</span><br><span class="line"></span><br><span class="line">注意其他的，display属性，比如 line 等等，他们创建的是 IFC ，我们暂且不研究。</span><br></pre></td></tr></table></figure>
-
-<p>虽然添加上述的任意一条都能创建BFC，但会有一些副作用：</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="selector-class">.display</span>: <span class="selector-tag">table</span> 可能引发响应性问题</span><br><span class="line"><span class="number">2</span><span class="selector-class">.overflow</span>: scroll 可能产生多余的滚动条</span><br><span class="line"><span class="number">3</span><span class="selector-class">.float</span>: <span class="attribute">left</span> 将把元素移至左侧，并被其他元素环绕</span><br><span class="line"><span class="number">4</span><span class="selector-class">.overflow</span>: hidden 将裁切溢出元素</span><br></pre></td></tr></table></figure>
-
-<p>在实际开发中，我们一般通过overflow:hidden来开启BFC</p>
-<h3 id="1-2-BFC元素所具有的特性"><a href="#1-2-BFC元素所具有的特性" class="headerlink" title="1.2 BFC元素所具有的特性"></a>1.2 BFC元素所具有的特性</h3><p>BFC布局规则特性：</p>
-<p>1.在BFC中，盒子从顶端开始垂直地一个接一个地排列.</p>
-<p>2.盒子垂直方向的距离由margin决定。属于同一个BFC的两个相邻盒子的margin会发生重叠</p>
-<p>3.在BFC中，每一个盒子的左外边缘（margin-left）会触碰到容器的左边缘(border-left)（对于从右到左的格式来说，则触碰到右边缘）。</p>
-<p>4.BFC的区域不会与浮动盒子产生交集，而是紧贴浮动边缘。</p>
-<p>5.计算BFC的高度时，自然也会检测浮动或者定位的盒子高度。</p>
-<p>6.BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面元素，反之亦然</p>
-<h3 id="1-3-BFC的主要用途"><a href="#1-3-BFC的主要用途" class="headerlink" title="1.3 BFC的主要用途"></a>1.3 BFC的主要用途</h3><p>BFC能用来做什么？</p>
-<p>(1) 清除元素内部浮动</p>
-<p>只要把父元素设为BFC就可以清理子元素的浮动了，最常见的用法就是在父元素上设置overflow: hidden样式，对于IE6加上zoom:1就可以了。</p>
-<p>主要用到 </p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">计算BFC的高度时，自然也会检测浮动或者定位的盒子高度。</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/06/12/BFC/BFC%5Cfu.jpg"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;par&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;child&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span> class=&quot;child&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    </span><br><span class="line"><span class="selector-class">.par</span> &#123;</span><br><span class="line">     <span class="attribute">overflow</span>: hidden;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#fcc</span>;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#f66</span>;</span><br><span class="line">     <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">     <span class="attribute">float</span>: left;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>(2) 解决外边距合并问题</p>
-<p>外边距合并的问题。</p>
-<p>主要用到 </p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">盒子垂直方向的距离由<span class="attribute">margin</span>决定。属于同一个BFC的两个相邻盒子的<span class="attribute">margin</span>会发生重叠</span><br></pre></td></tr></table></figure>
-
-<p>属于同一个BFC的两个相邻盒子的margin会发生重叠，那么我们创建不属于同一个BFC，就不会发生margin重叠了。</p>
-<p><img src="/2021/06/12/BFC/BFC%5Cma.png"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">p</span>&gt;Haha&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;wrap&quot;&gt;</span><br><span class="line">        &lt;<span class="selector-tag">p</span>&gt;Hehe&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-class">.wrap</span> &#123;</span><br><span class="line">        <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">p</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#f55</span>;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#fcc</span>;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">text-align</span>:center;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>(3) 制作右侧自适应的盒子问题</p>
-<p>主要用到 </p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">BFC的区域不会与浮动盒子产生交集，而是紧贴浮动边缘。</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/06/12/BFC/BFC%5Cyou.png"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;<span class="selector-tag">aside</span>&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;<span class="selector-tag">main</span>&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">        <span class="attribute">position</span>: relative;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="selector-class">.aside</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#f66</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="selector-class">.main</span> &#123;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#fcc</span>;</span><br><span class="line">        <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>(4) 消除子元素浮动对父元素的兄弟的文字布局产生的影响</p>
-<p>​    当浮动的子元素的高度大于父亲的高度的时候，此时会对父亲后面的兄弟中文字布局产生影响，父亲后面兄弟中的文字会贴着浮动的子元素后面进行布局。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">   <span class="selector-class">.parent</span>&#123;</span></span><br><span class="line"><span class="css">       <span class="attribute">width</span>:<span class="number">300px</span>;</span></span><br><span class="line"><span class="css">       <span class="attribute">height</span>:<span class="number">300px</span>;</span></span><br><span class="line"><span class="css">       <span class="attribute">background</span>:yellow;</span></span><br><span class="line"><span class="css">       <span class="attribute">overflow</span>:hidden;<span class="comment">/*开启BFC，彻底消除parent里面元素对外面布局产生的影响*/</span></span></span><br><span class="line"><span class="css">   &#125;</span></span><br><span class="line"><span class="css">   </span></span><br><span class="line"><span class="css">   <span class="selector-class">.parent</span> <span class="selector-class">.child</span>&#123;</span></span><br><span class="line"><span class="css">       <span class="attribute">float</span><span class="selector-pseudo">:left</span>;</span></span><br><span class="line"><span class="css">       <span class="attribute">height</span>:<span class="number">350px</span>;</span></span><br><span class="line"><span class="css">   &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;parent&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;child&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  	你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  	你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  	你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    你好啊<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="1-4-BFC-总结"><a href="#1-4-BFC-总结" class="headerlink" title="1.4 BFC 总结"></a>1.4 BFC 总结</h3><p>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。包括浮动，和外边距合并等等。</p>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mongodb导入导出</title>
-    <url>/2021/06/22/mongodb%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</url>
-    <content><![CDATA[<h2 id="1-MongoDB的导入导出"><a href="#1-MongoDB的导入导出" class="headerlink" title="1.MongoDB的导入导出"></a>1.MongoDB的导入导出</h2><h3 id="1-1-MongoDB的导出功能"><a href="#1-1-MongoDB的导出功能" class="headerlink" title="1.1 MongoDB的导出功能"></a>1.1 MongoDB的导出功能</h3><h4 id="1-1-1-导出单个文件"><a href="#1-1-1-导出单个文件" class="headerlink" title="1.1.1 导出单个文件"></a>1.1.1 导出单个文件</h4><p>mongodb提供了导入和导出的功能，分别是MongoDB下载目录下的mongoexport.exe和mongoimport.exe文件 ，具体的导出命令格式如下：　　　　</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mongoexport -h dbhost -d dbname -c collectionName -o output</span></span><br></pre></td></tr></table></figure>
-
-<p>参数说明:</p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导出的集合</span></span><br><span class="line"><span class="deletion">-o 指明要导出的文件名   文件支持多种格式，如txt,wps,xls等</span></span><br></pre></td></tr></table></figure>
-
-<p>具体示例：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h4 id="1-1-2-导出整个集合"><a href="#1-1-2-导出整个集合" class="headerlink" title="1.1.2 导出整个集合"></a>1.1.2 导出整个集合</h4><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mongodump</span> -h localhost:<span class="number">27017</span> -d xx -o D:\test\</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1-2-MongoDB的导入功能"><a href="#1-2-MongoDB的导入功能" class="headerlink" title="1.2 MongoDB的导入功能"></a>1.2 MongoDB的导入功能</h3><p>导入数据可以使用命令：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">mongoimport -h dbhost -d dbname -c collectionname <span class="selector-tag">input</span></span><br></pre></td></tr></table></figure>
-
-<p>参数说明:</p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导入的集合   mongodb本身支持隐式创建，故事先无需创建集合  </span></span><br><span class="line">input 文件的地址</span><br></pre></td></tr></table></figure>
-
-<p>具体示例：　</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>mongodb</category>
-      </categories>
-      <tags>
-        <tag>mongodb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>date格式化</title>
-    <url>/2021/06/08/date%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
-    <content><![CDATA[<h2 id="1-格式化日期对象"><a href="#1-格式化日期对象" class="headerlink" title="1. 格式化日期对象"></a>1. 格式化日期对象</h2><p>格式化日期对象，返回yyyy-MM-dd HH:mm:ss的形式</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatDate</span>(<span class="params">d</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//如果date不是日期对象，返回</span></span><br><span class="line">  <span class="keyword">if</span> (!date <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> year = d.getFullYear(),</span><br><span class="line">      month = d.getMonth() + <span class="number">1</span>, </span><br><span class="line">      date = d.getDate(), </span><br><span class="line">      hour = d.getHours(), </span><br><span class="line">      minute = d.getMinutes(), </span><br><span class="line">      second = d.getSeconds();</span><br><span class="line">  month = month &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + month : month;</span><br><span class="line">  date = date &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + date : date;</span><br><span class="line">  hour = hour &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + hour : hour;</span><br><span class="line">  minute = minute &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + minute:minute;</span><br><span class="line">  second = second &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + second:second;</span><br><span class="line">  <span class="keyword">return</span> year + <span class="string">&#x27;-&#x27;</span> + month + <span class="string">&#x27;-&#x27;</span> + date + <span class="string">&#x27; &#x27;</span> + hour + <span class="string">&#x27;:&#x27;</span> + minute + <span class="string">&#x27;:&#x27;</span> + second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>计算时间差，返回相差的天/时/分/秒</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//作用求两个日期时间的时间间隔</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSpaceBetweenDate</span>(<span class="params">date1,date2</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.得到两个日期之间的秒数</span></span><br><span class="line">    <span class="keyword">var</span> between = <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.abs(date1 - date2)/<span class="number">1000</span>);</span><br><span class="line">    <span class="comment">//2.把秒数转换成相差多少天  多少小时  多少分钟  多少秒</span></span><br><span class="line">    <span class="keyword">var</span> day = <span class="built_in">Math</span>.floor(between/(<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>));</span><br><span class="line">    <span class="keyword">var</span> hour =  <span class="built_in">Math</span>.floor(between/<span class="number">60</span>/<span class="number">60</span>) % <span class="number">24</span>;</span><br><span class="line">    <span class="keyword">var</span> minute = <span class="built_in">Math</span>.floor(between/<span class="number">60</span>)%<span class="number">60</span>;</span><br><span class="line">    <span class="keyword">var</span> second = between%<span class="number">60</span>;</span><br><span class="line">    <span class="comment">//3.包装一个对象返回</span></span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="attr">day</span>:day,</span><br><span class="line">        <span class="attr">hour</span>:hour,</span><br><span class="line">        <span class="attr">minute</span>:minute,</span><br><span class="line">        <span class="attr">second</span>:second</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> date1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2017-8-8 22:23:23&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> date2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2017-10-8 23:30:30&quot;</span>);</span><br><span class="line"><span class="comment">//使用自己写的方法求两个时间的差</span></span><br><span class="line"><span class="keyword">var</span> o = getSpaceBetweenDate(date1,date2);</span><br><span class="line"><span class="built_in">console</span>.log(o);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
 </search>

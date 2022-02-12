@@ -590,6 +590,133 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yq6668.github.io/2021/07/23/fetch-cookie/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yq">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/headr.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一缕清风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/07/23/fetch-cookie/" itemprop="url">fetch-cookie</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-23T15:45:33+08:00">
+                2021-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="fetch发送请求携带cookie"><a href="#fetch发送请求携带cookie" class="headerlink" title="fetch发送请求携带cookie"></a>fetch发送请求携带cookie</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const result = fetch(url, &#123;</span><br><span class="line">        <span class="regexp">//</span>fetch不管在同域还是在跨域的情况下，默认都不携带cookie的，所以那些需要权限验证的请求就         无法正常获取到数据，这时候需要配置credentials项，有一下三个选项可添：</span><br><span class="line">        <span class="regexp">//</span>credentials:omit        默认值，忽略cookie的发送</span><br><span class="line">        <span class="regexp">//</span>credentials:same-origin 同源情况会发送cookie</span><br><span class="line">        <span class="regexp">//</span>credentials:include     表示既可以同域发送，也可以跨域发送</span><br><span class="line">        credentials: <span class="string">&#x27;include&#x27;</span>,</span><br><span class="line">        headers: &#123;</span><br><span class="line">            <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;application/json, text/plain, */*&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yq6668.github.io/2021/06/22/mongodb%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -698,6 +825,150 @@
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+    
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yq6668.github.io/2021/06/15/js%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yq">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/headr.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一缕清风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/15/js%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" itemprop="url">js类型判断</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-15T16:22:32+08:00">
+                2021-06-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-js类型判断"><a href="#1-js类型判断" class="headerlink" title="1. js类型判断"></a>1. js类型判断</h2><h3 id="1-1-js中的数据类型"><a href="#1-1-js中的数据类型" class="headerlink" title="1.1 js中的数据类型"></a>1.1 js中的数据类型</h3><p>基本数据类型：Undefined、Null、Boolean、Number、String，Symbol</p>
+<p>引用数据类型 ：Object</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> bool = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;abc&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span>  und= <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">let</span> nul = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">&#x27;xiaoming&#x27;</span>,<span class="attr">age</span>:<span class="number">22</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> fun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;hello&#x27;</span>)&#125;;</span><br><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-typeof"><a href="#1-2-typeof" class="headerlink" title="1.2 typeof"></a>1.2 typeof</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> bool); <span class="comment">//boolean</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num);<span class="comment">//number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);<span class="comment">//string</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> und);<span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> nul);<span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> arr);<span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj);<span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fun);<span class="comment">//function</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> s1); <span class="comment">//symbol</span></span><br></pre></td></tr></table></figure>
+
+<p>typeof可以识别出基本类型boolean,number,undefined,string,symbol，但是不能识别null。不能识别引用数据类型，会把null、array、object统一归为object类型,但是可以识别出function。<br> 所以typeof可以用来识别一些基本类型。</p>
+<h3 id="1-3-instanceof"><a href="#1-3-instanceof" class="headerlink" title="1.3 instanceof"></a>1.3 instanceof</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(bool <span class="keyword">instanceof</span> <span class="built_in">Boolean</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(num <span class="keyword">instanceof</span> <span class="built_in">Number</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(str <span class="keyword">instanceof</span> <span class="built_in">String</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(und <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(nul <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>);<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(obj <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(fun <span class="keyword">instanceof</span> <span class="built_in">Function</span>);<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(s1 <span class="keyword">instanceof</span> <span class="built_in">Symbol</span>);<span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>从结果中看出instanceof不能识别出基本的数据类型 number、boolean、string、undefined、unll、symbol。</p>
+<p>但是可以检测出引用类型，如array、object、function，同时对于是使用new声明的类型，它还可以检测出多层继承关系。</p>
+<p>其实也很好理解，js的继承都是采用原型链来继承的。比如objA instanceof A ，其实就是看objA的原型链上是否有A的原型，而A的原型上保留A的constructor属性。<br>所以instanceof一般用来检测对象类型，以及继承关系。</p>
+<h3 id="1-4-constructor"><a href="#1-4-constructor" class="headerlink" title="1.4 constructor"></a>1.4 constructor</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">console.log(bool.constructor === Boolean);// true</span><br><span class="line">console.log(num.constructor === Number);// true</span><br><span class="line">console.log(str.constructor === String);// true</span><br><span class="line">console.log(arr.constructor === Array);// true</span><br><span class="line">console.log(obj.constructor === Object);// true</span><br><span class="line">console.log(fun.constructor === Function);// true</span><br><span class="line">console.log(s1.constructor === Symbol);//true</span><br></pre></td></tr></table></figure>
+
+<p>null、undefined没有construstor方法，因此constructor不能判断undefined和null。<br> 但是他是不安全的，因为contructor的指向是可以被改变。</p>
+<h3 id="1-5-Object-prototype-toString-call"><a href="#1-5-Object-prototype-toString-call" class="headerlink" title="1.5 Object.prototype.toString.call"></a>1.5 Object.prototype.toString.call</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(bool));<span class="comment">//[object Boolean]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(num));<span class="comment">//[object Number]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(str));<span class="comment">//[object String]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(und));<span class="comment">//[object Undefined]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(nul));<span class="comment">//[object Null]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(arr));<span class="comment">//[object Array]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(obj));<span class="comment">//[object Object]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(fun));<span class="comment">//[object Function]</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(s1)); <span class="comment">//[object Symbol]</span></span><br></pre></td></tr></table></figure>
+
+<p>此方法可以相对较全的判断js的数据类型。</p>
+<p>至于在项目中使用哪个判断，还是要看使用场景，具体的选择，一般基本的类型可以选择typeof，引用类型可以使用instanceof。</p>
+
+          
         
       
     </div>
@@ -1070,7 +1341,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
