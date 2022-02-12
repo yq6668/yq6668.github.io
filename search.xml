@@ -235,7 +235,7 @@
 <figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mongoexport -h dbhost -d dbname -c collectionName -o output</span></span><br></pre></td></tr></table></figure>
 
 <p>参数说明:</p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导出的集合</span></span><br><span class="line"><span class="deletion">-o 指明要导出的文件名（文件支持多种格式，如txt,wps,xls等）</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导出的集合</span></span><br><span class="line"><span class="deletion">-o 指明要导出的文件名(文件支持多种格式，如txt,wps,xls等)</span></span><br></pre></td></tr></table></figure>
 
 <p>具体示例：</p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
@@ -250,7 +250,7 @@
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">mongoimport -h dbhost -d dbname -c collectionname <span class="selector-tag">input</span></span><br></pre></td></tr></table></figure>
 
 <p>参数说明:</p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导入的集合（mongodb本身支持隐式创建，故事先无需创建集合）</span></span><br><span class="line">input 文件的地址</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导入的集合(mongodb本身支持隐式创建，故事先无需创建集合)</span></span><br><span class="line">input 文件的地址</span><br></pre></td></tr></table></figure>
 
 <p>具体示例：　</p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
