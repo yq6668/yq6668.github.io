@@ -240,6 +240,8 @@
 <p>具体示例：</p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <h4 id="1-1-2-导出整个集合"><a href="#1-1-2-导出整个集合" class="headerlink" title="1.1.2 导出整个集合"></a>1.1.2 导出整个集合</h4><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mongodump</span> -h localhost:<span class="number">27017</span> -d xx -o D:\test\</span><br></pre></td></tr></table></figure>
 
 

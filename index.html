@@ -683,8 +683,7 @@
 
       
         
-          
-            <h2 id="1-MongoDB的导入导出"><a href="#1-MongoDB的导入导出" class="headerlink" title="1.MongoDB的导入导出"></a>1.MongoDB的导入导出</h2><h3 id="1-1-MongoDB的导出功能"><a href="#1-1-MongoDB的导出功能" class="headerlink" title="1.1 MongoDB的导出功能"></a>1.1 MongoDB的导出功能</h3><h4 id="1-1-1-导出单个文件"><a href="#1-1-1-导出单个文件" class="headerlink" title="1.1.1 导出单个文件"></a>1.1.1 导出单个文件</h4><p>mongodb提供了导入和导出的功能，分别是MongoDB下载目录下的mongoexport.exe和mongoimport.exe文件 ，具体的导出命令格式如下：　　　　</p>
+          <h2 id="1-MongoDB的导入导出"><a href="#1-MongoDB的导入导出" class="headerlink" title="1.MongoDB的导入导出"></a>1.MongoDB的导入导出</h2><h3 id="1-1-MongoDB的导出功能"><a href="#1-1-MongoDB的导出功能" class="headerlink" title="1.1 MongoDB的导出功能"></a>1.1 MongoDB的导出功能</h3><h4 id="1-1-1-导出单个文件"><a href="#1-1-1-导出单个文件" class="headerlink" title="1.1.1 导出单个文件"></a>1.1.1 导出单个文件</h4><p>mongodb提供了导入和导出的功能，分别是MongoDB下载目录下的mongoexport.exe和mongoimport.exe文件 ，具体的导出命令格式如下：　　　　</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mongoexport -h dbhost -d dbname -c collectionName -o output</span></span><br></pre></td></tr></table></figure>
 
 <p>参数说明:</p>
@@ -692,21 +691,13 @@
 
 <p>具体示例：</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-1-2-导出整个集合"><a href="#1-1-2-导出整个集合" class="headerlink" title="1.1.2 导出整个集合"></a>1.1.2 导出整个集合</h4><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mongodump</span> -h localhost:<span class="number">27017</span> -d xx -o D:\test\</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1-2-MongoDB的导入功能"><a href="#1-2-MongoDB的导入功能" class="headerlink" title="1.2 MongoDB的导入功能"></a>1.2 MongoDB的导入功能</h3><p>导入数据可以使用命令：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongoimport -h dbhost -d dbname -c collectionname <span class="selector-tag">input</span></span><br></pre></td></tr></table></figure>
-
-<p>参数说明:</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导入的集合（mongodb本身支持隐式创建，故事先无需创建集合）</span></span><br><span class="line">input 文件的地址</span><br></pre></td></tr></table></figure>
-
-<p>具体示例：　</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/06/22/mongodb%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -991,7 +982,7 @@
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
-                    <a href="https://github.com/yq6668/code.git" target="_blank" title="GitHub">
+                    <a href="https://github.com/yq6668" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
