@@ -165,8 +165,8 @@
         <category>websocket</category>
       </categories>
       <tags>
+        <tag>JavaScrip</tag>
         <tag>websocket</tag>
-        <tag>javascrip</tag>
       </tags>
   </entry>
   <entry>
@@ -260,6 +260,21 @@
       </categories>
       <tags>
         <tag>mongodb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>date格式化</title>
+    <url>/2021/06/08/date%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="1-格式化日期对象"><a href="#1-格式化日期对象" class="headerlink" title="1. 格式化日期对象"></a>1. 格式化日期对象</h2><p>格式化日期对象，返回yyyy-MM-dd HH:mm:ss的形式</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatDate</span>(<span class="params">d</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//如果date不是日期对象，返回</span></span><br><span class="line">  <span class="keyword">if</span> (!date <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> year = d.getFullYear(),</span><br><span class="line">      month = d.getMonth() + <span class="number">1</span>, </span><br><span class="line">      date = d.getDate(), </span><br><span class="line">      hour = d.getHours(), </span><br><span class="line">      minute = d.getMinutes(), </span><br><span class="line">      second = d.getSeconds();</span><br><span class="line">  month = month &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + month : month;</span><br><span class="line">  date = date &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + date : date;</span><br><span class="line">  hour = hour &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + hour : hour;</span><br><span class="line">  minute = minute &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + minute:minute;</span><br><span class="line">  second = second &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> + second:second;</span><br><span class="line">  <span class="keyword">return</span> year + <span class="string">&#x27;-&#x27;</span> + month + <span class="string">&#x27;-&#x27;</span> + date + <span class="string">&#x27; &#x27;</span> + hour + <span class="string">&#x27;:&#x27;</span> + minute + <span class="string">&#x27;:&#x27;</span> + second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>计算时间差，返回相差的天/时/分/秒</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//作用求两个日期时间的时间间隔</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSpaceBetweenDate</span>(<span class="params">date1,date2</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.得到两个日期之间的秒数</span></span><br><span class="line">    <span class="keyword">var</span> between = <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.abs(date1 - date2)/<span class="number">1000</span>);</span><br><span class="line">    <span class="comment">//2.把秒数转换成相差多少天  多少小时  多少分钟  多少秒</span></span><br><span class="line">    <span class="keyword">var</span> day = <span class="built_in">Math</span>.floor(between/(<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>));</span><br><span class="line">    <span class="keyword">var</span> hour =  <span class="built_in">Math</span>.floor(between/<span class="number">60</span>/<span class="number">60</span>) % <span class="number">24</span>;</span><br><span class="line">    <span class="keyword">var</span> minute = <span class="built_in">Math</span>.floor(between/<span class="number">60</span>)%<span class="number">60</span>;</span><br><span class="line">    <span class="keyword">var</span> second = between%<span class="number">60</span>;</span><br><span class="line">    <span class="comment">//3.包装一个对象返回</span></span><br><span class="line">    <span class="keyword">var</span> obj = &#123;</span><br><span class="line">        <span class="attr">day</span>:day,</span><br><span class="line">        <span class="attr">hour</span>:hour,</span><br><span class="line">        <span class="attr">minute</span>:minute,</span><br><span class="line">        <span class="attr">second</span>:second</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> date1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2017-8-8 22:23:23&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> date2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2017-10-8 23:30:30&quot;</span>);</span><br><span class="line"><span class="comment">//使用自己写的方法求两个时间的差</span></span><br><span class="line"><span class="keyword">var</span> o = getSpaceBetweenDate(date1,date2);</span><br><span class="line"><span class="built_in">console</span>.log(o);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
 </search>
