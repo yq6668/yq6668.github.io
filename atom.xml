@@ -68,7 +68,7 @@
     <link href="https://yq6668.github.io/2021/06/22/mongodb%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/"/>
     <id>https://yq6668.github.io/2021/06/22/mongodb%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</id>
     <published>2021-06-22T11:13:45.000Z</published>
-    <updated>2022-02-12T12:35:39.017Z</updated>
+    <updated>2022-02-12T12:36:02.442Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-MongoDB的导入导出&quot;&gt;&lt;a href=&quot;#1-MongoDB的导入导出&quot; class=&quot;headerlink&quot; title=&quot;1.MongoDB的导入导出&quot;&gt;&lt;/a&gt;1.MongoDB的导入导出&lt;/h2&gt;&lt;h3 id=&quot;1-1-MongoDB的导出功能&quot;&gt;&lt;a href=&quot;#1-1-MongoDB的导出功能&quot; class=&quot;headerlink&quot; title=&quot;1.1 MongoDB的导出功能&quot;&gt;&lt;/a&gt;1.1 MongoDB的导出功能&lt;/h3&gt;&lt;h4 id=&quot;1-1-1-导出单个文件&quot;&gt;&lt;a href=&quot;#1-1-1-导出单个文件&quot; class=&quot;headerlink&quot; title=&quot;1.1.1 导出单个文件&quot;&gt;&lt;/a&gt;1.1.1 导出单个文件&lt;/h4&gt;&lt;p&gt;mongodb提供了导入和导出的功能，分别是MongoDB下载目录下的mongoexport.exe和mongoimport.exe文件 ，具体的导出命令格式如下：　　　　&lt;/p&gt;

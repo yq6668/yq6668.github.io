@@ -254,6 +254,7 @@
 
 <p>具体示例：　</p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoimport -h localhost:<span class="number">27017</span> -d xx -c xx C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>mongodb</category>
