@@ -814,8 +814,10 @@
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mongoexport -h dbhost -d dbname -c collectionName -o output</span></span><br></pre></td></tr></table></figure>
 
 <p>参数说明:</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-h 数据库地址</span></span><br><span class="line"><span class="deletion">-d 指明使用的库</span></span><br><span class="line"><span class="deletion">-c 指明要导出的集合</span></span><br><span class="line"><span class="deletion">-o 指明要导出的文件名   文件支持多种格式，如txt,wps,xls等</span></span><br></pre></td></tr></table></figure>
-
+<p>-h 数据库地址 </p>
+<p>-d 指明使用的库</p>
+<p>-c 指明要导出的集合</p>
+<p>-o 指明要导出的文件名   文件支持多种格式，如txt,wps,xls等</p>
 <p>具体示例：</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.txt</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.wps</span><br><span class="line">mongoexport -h localhost:<span class="number">27017</span> -d xx -c xx -o C:<span class="regexp">//</span>test.xls</span><br></pre></td></tr></table></figure>
           <!--noindex-->
