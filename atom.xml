@@ -6,7 +6,7 @@
   <link href="https://yq6668.github.io/atom.xml" rel="self"/>
   
   <link href="https://yq6668.github.io/"/>
-  <updated>2022-02-12T12:33:35.386Z</updated>
+  <updated>2022-02-14T08:47:44.274Z</updated>
   <id>https://yq6668.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>webpack内存溢出</title>
+    <link href="https://yq6668.github.io/2021/11/22/vue%E6%8F%90%E7%A4%BAmax-old/"/>
+    <id>https://yq6668.github.io/2021/11/22/vue%E6%8F%90%E7%A4%BAmax-old/</id>
+    <published>2021-11-22T08:06:52.000Z</published>
+    <updated>2022-02-14T08:47:44.274Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;vue运行提示node-–max-old-space-size-10240&quot;&gt;&lt;a href=&quot;#vue运行提示node-–max-old-space-size-10240&quot; class=&quot;headerlink&quot; title=&quot;vue运行提示node –max-old-space-size=10240&quot;&gt;&lt;/a&gt;vue运行提示node –max-old-space-size=10240&lt;/h2&gt;&lt;p&gt;如果在运行项目的过程中出现这个问题，意思是内存溢出，因为在Node 中通过 JavaScript 使用内存时只能使用部分内存（64位系统下约为1.4 GB，32位系统下约为0.7 GB），当我们的项目如果非常的庞大，webpack 编译时就会占用很多的系统资源，就会造成内存溢出。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+    <category term="node" scheme="https://yq6668.github.io/tags/node/"/>
+    
+    <category term="vue" scheme="https://yq6668.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>websocket</title>
     <link href="https://yq6668.github.io/2021/10/15/ws/"/>
     <id>https://yq6668.github.io/2021/10/15/ws/</id>
     <published>2021-10-15T10:38:11.000Z</published>
-    <updated>2022-02-12T12:33:35.386Z</updated>
+    <updated>2022-02-14T01:52:04.800Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;1-websocket介绍&quot;&gt;&lt;a href=&quot;#1-websocket介绍&quot; class=&quot;headerlink&quot; title=&quot;1.websocket介绍&quot;&gt;&lt;/a&gt;1.websocket介绍&lt;/h1&gt;&lt;h2 id=&quot;1-1-简介&quot;&gt;&lt;a href=&quot;#1-1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.1.简介&quot;&gt;&lt;/a&gt;1.1.简介&lt;/h2&gt;&lt;p&gt;WebSocket 协议在2008年诞生，2011年成为国际标准。所有浏览器都已经支持了。&lt;/p&gt;
@@ -38,28 +61,38 @@
     <category term="websocket" scheme="https://yq6668.github.io/categories/websocket/"/>
     
     
-    <category term="JavaScrip" scheme="https://yq6668.github.io/tags/JavaScrip/"/>
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
     
     <category term="websocket" scheme="https://yq6668.github.io/tags/websocket/"/>
+    
+    <category term="node" scheme="https://yq6668.github.io/tags/node/"/>
     
   </entry>
   
   <entry>
-    <title>canvas贪吃蛇</title>
-    <link href="https://yq6668.github.io/2021/09/23/canvas%E8%B4%AA%E5%90%83%E8%9B%87/"/>
-    <id>https://yq6668.github.io/2021/09/23/canvas%E8%B4%AA%E5%90%83%E8%9B%87/</id>
-    <published>2021-09-23T13:32:55.000Z</published>
-    <updated>2021-09-23T13:46:29.554Z</updated>
+    <title>react-router url转换</title>
+    <link href="https://yq6668.github.io/2021/10/14/react-router%E4%BC%A0%E5%80%BC%E8%BD%AC%E6%8D%A2/"/>
+    <id>https://yq6668.github.io/2021/10/14/react-router%E4%BC%A0%E5%80%BC%E8%BD%AC%E6%8D%A2/</id>
+    <published>2021-10-14T01:29:51.000Z</published>
+    <updated>2022-02-14T01:55:36.105Z</updated>
     
     
-    <summary type="html">&lt;img src=&quot;/2021/09/23/canvas%E8%B4%AA%E5%90%83%E8%9B%87/tc.png&quot; style=&quot;zoom:67%;&quot;&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
     
     
     
+    <category term="React" scheme="https://yq6668.github.io/categories/React/"/>
     
-    <category term="JavaScrip" scheme="https://yq6668.github.io/tags/JavaScrip/"/>
     
-    <category term="canvas" scheme="https://yq6668.github.io/tags/canvas/"/>
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+    <category term="react-router" scheme="https://yq6668.github.io/tags/react-router/"/>
     
   </entry>
   
@@ -68,7 +101,7 @@
     <link href="https://yq6668.github.io/2021/07/23/fetch-cookie/"/>
     <id>https://yq6668.github.io/2021/07/23/fetch-cookie/</id>
     <published>2021-07-23T07:45:33.000Z</published>
-    <updated>2022-02-12T12:48:23.125Z</updated>
+    <updated>2022-02-14T01:47:52.272Z</updated>
     
     
       
@@ -80,6 +113,28 @@
       
     
     
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中的this指向</title>
+    <link href="https://yq6668.github.io/2021/07/06/js%E4%B8%AD%E7%9A%84this%E6%8C%87%E5%90%91/"/>
+    <id>https://yq6668.github.io/2021/07/06/js%E4%B8%AD%E7%9A%84this%E6%8C%87%E5%90%91/</id>
+    <published>2021-07-06T07:12:20.000Z</published>
+    <updated>2022-02-14T08:48:43.262Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-默认this绑定window&quot;&gt;&lt;a href=&quot;#1-默认this绑定window&quot; class=&quot;headerlink&quot; title=&quot;1. 默认this绑定window&quot;&gt;&lt;/a&gt;1. 默认this绑定window&lt;/h2&gt;&lt;p&gt;当在全局的上下文中调用this，此时this指向是默认的window。&lt;/p&gt;
+&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&amp;#x27;哈哈&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;)  &lt;span class=&quot;comment&quot;&gt;//这里的this 处于全局上下文 指向的便是window&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.name) &lt;span class=&quot;comment&quot;&gt;// 此时this.name 相当于window.name, 即全局作用域下的name ‘哈哈’&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;javascript&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
@@ -119,7 +174,7 @@
     <link href="https://yq6668.github.io/2021/06/15/js%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/"/>
     <id>https://yq6668.github.io/2021/06/15/js%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/</id>
     <published>2021-06-15T08:22:32.000Z</published>
-    <updated>2022-02-13T06:08:51.510Z</updated>
+    <updated>2022-02-14T01:31:21.676Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-js类型判断&quot;&gt;&lt;a href=&quot;#1-js类型判断&quot; class=&quot;headerlink&quot; title=&quot;1. js类型判断&quot;&gt;&lt;/a&gt;1. js类型判断&lt;/h2&gt;&lt;h3 id=&quot;1-1-js中的数据类型&quot;&gt;&lt;a href=&quot;#1-1-js中的数据类型&quot; class=&quot;headerlink&quot; title=&quot;1.1 js中的数据类型&quot;&gt;&lt;/a&gt;1.1 js中的数据类型&lt;/h3&gt;&lt;p&gt;基本数据类型：Undefined、Null、Boolean、Number、String，Symbol&lt;/p&gt;
@@ -127,6 +182,8 @@
 &lt;figure class=&quot;highlight jsx&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; bool = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; num = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; str = &lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt;  und= &lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; nul = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; arr = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&amp;#x27;xiaoming&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;attr&quot;&gt;age&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; fun = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;hello&amp;#x27;&lt;/span&gt;)&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; s1 = &lt;span class=&quot;built_in&quot;&gt;Symbol&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
@@ -156,17 +213,40 @@
   </entry>
   
   <entry>
+    <title>canvas贪吃蛇</title>
+    <link href="https://yq6668.github.io/2021/06/10/canvas%E8%B4%AA%E5%90%83%E8%9B%87/"/>
+    <id>https://yq6668.github.io/2021/06/10/canvas%E8%B4%AA%E5%90%83%E8%9B%87/</id>
+    <published>2021-06-10T13:32:55.000Z</published>
+    <updated>2022-02-14T01:50:49.064Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2021/06/10/canvas%E8%B4%AA%E5%90%83%E8%9B%87/tc.png&quot; style=&quot;zoom:67%;&quot;&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="canvas" scheme="https://yq6668.github.io/tags/canvas/"/>
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>date格式化</title>
     <link href="https://yq6668.github.io/2021/06/08/date%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
     <id>https://yq6668.github.io/2021/06/08/date%E6%A0%BC%E5%BC%8F%E5%8C%96/</id>
     <published>2021-06-08T12:29:56.000Z</published>
-    <updated>2022-02-12T12:33:43.251Z</updated>
+    <updated>2022-02-14T01:49:52.832Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;1-格式化日期对象&quot;&gt;&lt;a href=&quot;#1-格式化日期对象&quot; class=&quot;headerlink&quot; title=&quot;1. 格式化日期对象&quot;&gt;&lt;/a&gt;1. 格式化日期对象&lt;/h2&gt;&lt;p&gt;格式化日期对象，返回yyyy-MM-dd HH:mm:ss的形式&lt;/p&gt;
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;formatDate&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;d&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//如果date不是日期对象，返回&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!date &lt;span class=&quot;keyword&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; year = d.getFullYear(),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      month = d.getMonth() + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      date = d.getDate(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      hour = d.getHours(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      minute = d.getMinutes(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      second = d.getSeconds();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  month = month &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + month : month;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  date = date &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + date : date;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  hour = hour &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + hour : hour;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  minute = minute &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + minute:minute;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  second = second &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + second:second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; year + &lt;span class=&quot;string&quot;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; + month + &lt;span class=&quot;string&quot;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; + date + &lt;span class=&quot;string&quot;&gt;&amp;#x27; &amp;#x27;&lt;/span&gt; + hour + &lt;span class=&quot;string&quot;&gt;&amp;#x27;:&amp;#x27;&lt;/span&gt; + minute + &lt;span class=&quot;string&quot;&gt;&amp;#x27;:&amp;#x27;&lt;/span&gt; + second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
