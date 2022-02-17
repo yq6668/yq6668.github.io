@@ -89,7 +89,7 @@
 <meta property="og:description" content="react如何渲染富文本内容在react中，通过富文本编辑器进行操作后的内容，会保留原有的标签样式，并不能正确展示。 方法如下： 1234567891011121314151617import React, &amp;#123; Component &amp;#125; from &amp;#x27;react&amp;#x27;; class App extends Component &amp;#123;  constructor(">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-12-16T08:33:55.000Z">
-<meta property="article:modified_time" content="2022-02-16T06:35:13.030Z">
+<meta property="article:modified_time" content="2022-02-17T12:59:19.015Z">
 <meta property="article:author" content="尹奇">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="React">
@@ -403,6 +403,7 @@
 <p>方法如下：</p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="type">React</span>, &#123; <span class="type">Component</span> &#125; from <span class="symbol">&#x27;reac</span>t&#x27;;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  constructor()&#123;</span><br><span class="line">    <span class="keyword">super</span>()</span><br><span class="line">    <span class="keyword">this</span>.state=&#123;</span><br><span class="line">      article:<span class="string">&quot;&lt;div&gt;我是富文本内容&lt;/div&gt;&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div dangerouslySetInnerHTML=&#123;&#123;__html:<span class="keyword">this</span>.state.article&#125;&#125;&gt;&lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">export <span class="keyword">default</span> <span class="type">App</span></span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
 
       
     </div>
@@ -446,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/11/22/vue%E6%8F%90%E7%A4%BAmax-old/" rel="next" title="webpack内存溢出">
-                <i class="fa fa-chevron-left"></i> webpack内存溢出
+              <a href="/2021/11/24/React-Native%E6%89%93%E5%BC%80%E7%B3%BB%E7%BB%9F%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="next" title="React Native打开系统浏览器">
+                <i class="fa fa-chevron-left"></i> React Native打开系统浏览器
               </a>
             
           </div>
@@ -539,7 +540,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -550,7 +551,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -561,7 +562,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

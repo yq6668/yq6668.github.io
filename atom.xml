@@ -6,7 +6,7 @@
   <link href="https://yq6668.github.io/atom.xml" rel="self"/>
   
   <link href="https://yq6668.github.io/"/>
-  <updated>2022-02-16T06:24:54.541Z</updated>
+  <updated>2022-02-17T12:59:25.577Z</updated>
   <id>https://yq6668.github.io/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://yq6668.github.io/2022/01/17/ts%E5%A3%B0%E6%98%8E%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/"/>
     <id>https://yq6668.github.io/2022/01/17/ts%E5%A3%B0%E6%98%8E%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</id>
     <published>2022-01-17T06:09:47.000Z</published>
-    <updated>2022-02-16T06:24:54.541Z</updated>
+    <updated>2022-02-17T12:59:25.577Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;ts声明全局变量&quot;&gt;&lt;a href=&quot;#ts声明全局变量&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;ts声明全局变量&quot;&gt;&lt;a href=&quot;#ts声明全局变量&quot; class=&quot;headerlink&quot; title=&quot;ts声明全局变量&quot;&gt;&lt;/a&gt;ts声明全局变量&lt;/h2&gt;&lt;p&gt;当我们把声明统一放在一个文件夹中的时候，每个页面要使用时都必须引入声明文件，非常的不方便。&lt;/p&gt;
+&lt;p&gt;这时我们可以使用命名空间来声明全局变量，这样就不需要引入：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//type.d.ts&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;declare namespace TYPE &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    type students = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;: number,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;: string,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//index.ts&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//import &amp;#123;students&amp;#125; from &amp;quot;type.d.ts&amp;quot; 现在不需要引入声明文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; obj:TYPE.students=&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&amp;#x27;xx&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
@@ -48,16 +44,12 @@
     <link href="https://yq6668.github.io/2021/12/16/react%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E5%AF%8C%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9/"/>
     <id>https://yq6668.github.io/2021/12/16/react%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E5%AF%8C%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9/</id>
     <published>2021-12-16T08:33:55.000Z</published>
-    <updated>2022-02-16T06:35:13.030Z</updated>
+    <updated>2022-02-17T12:59:19.015Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;react如何渲染富文本内容&quot;&gt;&lt;a href=&quot;#react如何渲染富文本内容&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;react如何渲染富文本内容&quot;&gt;&lt;a href=&quot;#react如何渲染富文本内容&quot; class=&quot;headerlink&quot; title=&quot;react如何渲染富文本内容&quot;&gt;&lt;/a&gt;react如何渲染富文本内容&lt;/h2&gt;&lt;p&gt;在react中，通过富文本编辑器进行操作后的内容，会保留原有的标签样式，并不能正确展示。&lt;/p&gt;
+&lt;p&gt;方法如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight scala&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;React&lt;/span&gt;, &amp;#123; &lt;span class=&quot;type&quot;&gt;Component&lt;/span&gt; &amp;#125; from &lt;span class=&quot;symbol&quot;&gt;&amp;#x27;reac&lt;/span&gt;t&amp;#x27;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Component&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  constructor()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.state=&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      article:&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;lt;div&amp;gt;我是富文本内容&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  render() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;lt;div dangerouslySetInnerHTML=&amp;#123;&amp;#123;__html:&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.state.article&amp;#125;&amp;#125;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    );&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;export &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;App&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
@@ -71,11 +63,32 @@
   </entry>
   
   <entry>
+    <title>React Native打开系统浏览器</title>
+    <link href="https://yq6668.github.io/2021/11/24/React-Native%E6%89%93%E5%BC%80%E7%B3%BB%E7%BB%9F%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    <id>https://yq6668.github.io/2021/11/24/React-Native%E6%89%93%E5%BC%80%E7%B3%BB%E7%BB%9F%E6%B5%8F%E8%A7%88%E5%99%A8/</id>
+    <published>2021-11-24T02:52:15.000Z</published>
+    <updated>2022-02-17T12:59:05.933Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;React-Native如何打开系统浏览器&quot;&gt;&lt;a href=&quot;#React-Native如何打开系统浏览器&quot; class=&quot;headerlink&quot; title=&quot;React Native如何打开系统浏览器&quot;&gt;&lt;/a&gt;React Native如何打开系统浏览器&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Linking&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;react-native&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//使用系统浏览器访问指定URL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; contactBaidu = &lt;span class=&quot;function&quot;&gt;() =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; baiduURL = &lt;span class=&quot;string&quot;&gt;&amp;#x27;http://www.baidu.com/&amp;#x27;&lt;/span&gt;         &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  Linking.canOpenURL(baiduURL).then(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;supported&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;         &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!supported) &amp;#123;            &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.warn(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Can\&amp;#x27;t handle url: &amp;#x27;&lt;/span&gt; + baiduURL);            &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;            &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; Linking.openURL(baiduURL);            &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;            &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;).catch(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;err&lt;/span&gt; =&amp;gt;&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.error(&lt;span class=&quot;string&quot;&gt;&amp;#x27;An error occurred&amp;#x27;&lt;/span&gt;,baiduURL));            &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="React-Native" scheme="https://yq6668.github.io/categories/React-Native/"/>
+    
+    
+    <category term="React" scheme="https://yq6668.github.io/tags/React/"/>
+    
+    <category term="React-Native" scheme="https://yq6668.github.io/tags/React-Native/"/>
+    
+  </entry>
+  
+  <entry>
     <title>webpack内存溢出</title>
     <link href="https://yq6668.github.io/2021/11/22/vue%E6%8F%90%E7%A4%BAmax-old/"/>
     <id>https://yq6668.github.io/2021/11/22/vue%E6%8F%90%E7%A4%BAmax-old/</id>
     <published>2021-11-22T08:06:52.000Z</published>
-    <updated>2022-02-14T08:47:44.274Z</updated>
+    <updated>2022-02-17T12:59:45.482Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;vue运行提示node-–max-old-space-size-10240&quot;&gt;&lt;a href=&quot;#vue运行提示node-–max-old-space-size-10240&quot; class=&quot;headerlink&quot; title=&quot;vue运行提示node –max-old-space-size=10240&quot;&gt;&lt;/a&gt;vue运行提示node –max-old-space-size=10240&lt;/h2&gt;&lt;p&gt;如果在运行项目的过程中出现这个问题，意思是内存溢出，因为在Node 中通过 JavaScript 使用内存时只能使用部分内存（64位系统下约为1.4 GB，32位系统下约为0.7 GB），当我们的项目如果非常的庞大，webpack 编译时就会占用很多的系统资源，就会造成内存溢出。&lt;/p&gt;</summary>
@@ -89,7 +102,29 @@
     
     <category term="node" scheme="https://yq6668.github.io/tags/node/"/>
     
-    <category term="vue" scheme="https://yq6668.github.io/tags/vue/"/>
+    <category term="Vue" scheme="https://yq6668.github.io/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue实现路由懒加载</title>
+    <link href="https://yq6668.github.io/2021/10/21/vue%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
+    <id>https://yq6668.github.io/2021/10/21/vue%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/</id>
+    <published>2021-10-21T02:30:01.000Z</published>
+    <updated>2022-02-17T12:36:07.039Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-路由懒加载&quot;&gt;&lt;a href=&quot;#1-路由懒加载&quot; class=&quot;headerlink&quot; title=&quot;1. 路由懒加载&quot;&gt;&lt;/a&gt;1. 路由懒加载&lt;/h2&gt;&lt;p&gt;当打包构建应用时，JavaScript 包会变得非常大，影响页面加载。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件，这样就会更加高效。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 将&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// import UserDetails from &amp;#x27;./views/UserDetails&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 替换成&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; UserDetails = &lt;span class=&quot;function&quot;&gt;() =&amp;gt;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;./views/UserDetails&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; router = createRouter(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;routes&lt;/span&gt;: [&amp;#123; &lt;span class=&quot;attr&quot;&gt;path&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&amp;#x27;/users/:id&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;attr&quot;&gt;component&lt;/span&gt;: UserDetails &amp;#125;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="Vue" scheme="https://yq6668.github.io/categories/Vue/"/>
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+    <category term="Vue" scheme="https://yq6668.github.io/tags/Vue/"/>
     
   </entry>
   
@@ -156,16 +191,10 @@
     <link href="https://yq6668.github.io/2021/10/14/react-router%E4%BC%A0%E5%80%BC%E8%BD%AC%E6%8D%A2/"/>
     <id>https://yq6668.github.io/2021/10/14/react-router%E4%BC%A0%E5%80%BC%E8%BD%AC%E6%8D%A2/</id>
     <published>2021-10-14T01:29:51.000Z</published>
-    <updated>2022-02-16T06:29:22.870Z</updated>
+    <updated>2022-02-17T12:59:12.661Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;url链接： ?id=&lt;span class=&quot;number&quot;&gt;222&lt;/span&gt;&amp;amp;name=xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &amp;#123; useLocation &amp;#125; &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;react-router-dom&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; location = useLocation()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &amp;#123; search &amp;#125; = location&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; paramsString = search.substring(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; searchParams = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; URLSearchParams(paramsString)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; token = searchParams.get(&lt;span class=&quot;string&quot;&gt;&amp;#x27;id&amp;#x27;&lt;/span&gt;)   &lt;span class=&quot;comment&quot;&gt;// 222&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; deviceId = searchParams.get(&lt;span class=&quot;string&quot;&gt;&amp;#x27;name&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// xxx&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
@@ -183,16 +212,15 @@
     <link href="https://yq6668.github.io/2021/09/17/gitignore%E4%B8%8D%E8%B5%B7%E4%BD%9C%E7%94%A8/"/>
     <id>https://yq6668.github.io/2021/09/17/gitignore%E4%B8%8D%E8%B5%B7%E4%BD%9C%E7%94%A8/</id>
     <published>2021-09-17T03:38:24.000Z</published>
-    <updated>2022-02-16T05:40:25.245Z</updated>
+    <updated>2022-02-17T12:58:33.132Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;gitignore不起作用&quot;&gt;&lt;a href=&quot;#gitignore不起作用&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;gitignore不起作用&quot;&gt;&lt;a href=&quot;#gitignore不起作用&quot; class=&quot;headerlink&quot; title=&quot;.gitignore不起作用&quot;&gt;&lt;/a&gt;.gitignore不起作用&lt;/h2&gt;&lt;p&gt;当我们使用git提交的时候，有时会发现”.gitignore”文件不起作用，但是里面的内容和格式都是正确的。&lt;/p&gt;
+&lt;p&gt;这是因为没有清除之前的缓存，导致不会再次执行修改后的”.gitignore”文件。&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;figure class=&quot;highlight pgsql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;清空git缓存&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git rm -r &lt;span class=&quot;comment&quot;&gt;--cached .&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;add&lt;/span&gt; .&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;commit&lt;/span&gt; -m &lt;span class=&quot;string&quot;&gt;&amp;#x27;update .gitignore&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;问题解决。&lt;/p&gt;</summary>
     
     
     
@@ -206,20 +234,85 @@
   </entry>
   
   <entry>
+    <title>JS对象合并方法</title>
+    <link href="https://yq6668.github.io/2021/09/08/JS%E5%AF%B9%E8%B1%A1%E5%90%88%E5%B9%B6%E6%96%B9%E6%B3%95/"/>
+    <id>https://yq6668.github.io/2021/09/08/JS%E5%AF%B9%E8%B1%A1%E5%90%88%E5%B9%B6%E6%96%B9%E6%B3%95/</id>
+    <published>2021-09-08T06:09:43.000Z</published>
+    <updated>2022-02-17T13:15:10.413Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;JS对象合并方法&quot;&gt;&lt;a href=&quot;#JS对象合并方法&quot; class=&quot;headerlink&quot; title=&quot;JS对象合并方法&quot;&gt;&lt;/a&gt;JS对象合并方法&lt;/h2&gt;&lt;p&gt;这里主要讲的是es6的合并对象方法，更加的方便快捷。&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj1=&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&amp;#x27;哈哈&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;sex&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&amp;#x27;male&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;skill&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;嘿嘿嘿&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj2=&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;where&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&amp;#x27;home&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;do&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;I like JavaScript ！&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//方法一：利用扩展运算符&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj3=&amp;#123;...obj1,...obj2&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(obj3);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//方法二：利用ES6 Object新增assign方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj4=&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.assign(&amp;#123;&amp;#125;,obj1,obj2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(obj4);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+    <category term="ES6" scheme="https://yq6668.github.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS正则匹配规则</title>
+    <link href="https://yq6668.github.io/2021/08/17/JS%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/"/>
+    <id>https://yq6668.github.io/2021/08/17/JS%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/</id>
+    <published>2021-08-17T08:37:30.000Z</published>
+    <updated>2022-02-17T13:41:39.382Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;1-JS正则匹配的基本规则&quot;&gt;&lt;a href=&quot;#1-JS正则匹配的基本规则&quot; class=&quot;headerlink&quot; title=&quot;1. JS正则匹配的基本规则&quot;&gt;&lt;/a&gt;1. JS正则匹配的基本规则&lt;/h2&gt;&lt;figure class=&quot;highlight excel&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\d   数字&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\w   字母(数字 字母 下划线)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\s   空白字符&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\D   非数字&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\W   非字母&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\S   非空白&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.    通配符(匹配除了\n之外的所有字符)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\b   单词边界匹配&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;*    匹配&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;个或多个&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;+    匹配至少&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;个&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;?    匹配&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;个或者&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;个&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&amp;#125;    &lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;至少出现&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;次&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&amp;#125;   &lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;出现&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;到&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;次&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;     &lt;span class=&quot;built_in&quot;&gt;n&lt;/span&gt;恰好出现&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;次&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[abc]    取值在abc之间&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[^abc]   取值在非abc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[a | b]  取值在a或者b之间&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[a-z]    取值在a到z之间&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;i   忽略大小写匹配&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;g   全局匹配&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;^   表示开头&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$   表示结束&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中的原型和原型链</title>
+    <link href="https://yq6668.github.io/2021/08/12/js%E4%B8%AD%E7%9A%84%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+    <id>https://yq6668.github.io/2021/08/12/js%E4%B8%AD%E7%9A%84%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/</id>
+    <published>2021-08-12T07:44:33.000Z</published>
+    <updated>2022-02-17T12:58:52.380Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;js中的原型和原型链&quot;&gt;&lt;a href=&quot;#js中的原型和原型链&quot; class=&quot;headerlink&quot; title=&quot;js中的原型和原型链&quot;&gt;&lt;/a&gt;js中的原型和原型链&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;原型关系&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个 class都有显示原型 prototype&lt;/li&gt;
+&lt;li&gt;每个实例都有隐式原型 _ proto_&lt;/li&gt;
+&lt;li&gt;实例的_ proto_指向对应 class 的 prototype&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;原型:&lt;/strong&gt;  在 JS 中，每当定义一个对象（函数也是对象）时，对象中都会包含一些预定义的属性。其中每个&lt;code&gt;函数对象&lt;/code&gt;都有一个&lt;code&gt;prototype&lt;/code&gt; 属性，这个属性指向函数的&lt;code&gt;原型对象&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原型链&lt;/strong&gt;：函数的原型链对象constructor默认指向函数本身，原型对象除了有原型属性外，为了实现继承，还有一个原型链指针__proto__,该指针是指向上一层的原型对象，而上一层的原型对象的结构依然类似。因此可以利用__proto__一直指向Object的原型对象上，而Object原型对象用Object.prototype.__ proto__ = null表示原型链顶端。如此形成了js的原型链继承。同时所有的js对象都有Object的基本防范&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;特点:&lt;/strong&gt;  &lt;code&gt;JavaScript&lt;/code&gt;对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+    <category term="ES6" scheme="https://yq6668.github.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>fetch-cookie</title>
     <link href="https://yq6668.github.io/2021/07/23/fetch-cookie/"/>
     <id>https://yq6668.github.io/2021/07/23/fetch-cookie/</id>
     <published>2021-07-23T07:45:33.000Z</published>
-    <updated>2022-02-14T01:47:52.272Z</updated>
+    <updated>2022-02-17T12:58:25.498Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;fetch发送请求携带cookie&quot;&gt;&lt;a href=&quot;#fetch发送请求携带cookie&quot; class=&quot;headerlink&quot; title=&quot;fetch发送请求携带cookie&quot;&gt;&lt;/a&gt;fetch发送请求携带cookie&lt;/h2&gt;&lt;figure</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;fetch发送请求携带cookie&quot;&gt;&lt;a href=&quot;#fetch发送请求携带cookie&quot; class=&quot;headerlink&quot; title=&quot;fetch发送请求携带cookie&quot;&gt;&lt;/a&gt;fetch发送请求携带cookie&lt;/h2&gt;&lt;figure class=&quot;highlight awk&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;const result = fetch(url, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;regexp&quot;&gt;//&lt;/span&gt;fetch不管在同域还是在跨域的情况下，默认都不携带cookie的，所以那些需要权限验证的请求就         无法正常获取到数据，这时候需要配置credentials项，有一下三个选项可添：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;regexp&quot;&gt;//&lt;/span&gt;credentials:omit        默认值，忽略cookie的发送&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;regexp&quot;&gt;//&lt;/span&gt;credentials:same-origin 同源情况会发送cookie&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;regexp&quot;&gt;//&lt;/span&gt;credentials:include     表示既可以同域发送，也可以跨域发送&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        credentials: &lt;span class=&quot;string&quot;&gt;&amp;#x27;include&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        headers: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&amp;#x27;Accept&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&amp;#x27;application/json, text/plain, */*&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
@@ -275,6 +368,31 @@
     
     
     <category term="mongodb" scheme="https://yq6668.github.io/tags/mongodb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序缓存时效性问题</title>
+    <link href="https://yq6668.github.io/2021/06/17/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E6%97%B6%E6%95%88%E6%80%A7%E9%97%AE%E9%A2%98/"/>
+    <id>https://yq6668.github.io/2021/06/17/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E6%97%B6%E6%95%88%E6%80%A7%E9%97%AE%E9%A2%98/</id>
+    <published>2021-06-17T12:09:50.000Z</published>
+    <updated>2022-02-17T12:22:21.344Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;微信小程序缓存时效性问题&quot;&gt;&lt;a href=&quot;#微信小程序缓存时效性问题&quot; class=&quot;headerlink&quot; title=&quot;微信小程序缓存时效性问题&quot;&gt;&lt;/a&gt;微信小程序缓存时效性问题&lt;/h2&gt;&lt;p&gt;在微信小程序中如果我们通过：&lt;/p&gt;
+&lt;figure class=&quot;highlight jboss-cli&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wx.&lt;span class=&quot;keyword&quot;&gt;set&lt;/span&gt;Storage（wx.&lt;span class=&quot;keyword&quot;&gt;set&lt;/span&gt;StorageSync）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wx.getStorage（wx.getStorageSync）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wx.&lt;span class=&quot;keyword&quot;&gt;clear&lt;/span&gt;Storage（wx.&lt;span class=&quot;keyword&quot;&gt;clear&lt;/span&gt;StorageSync）&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这些来设置缓存，那么这些都是永久性缓存，不会自动销毁。这时可以通过再设置一个时间缓存来进行判断。&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="WX" scheme="https://yq6668.github.io/categories/WX/"/>
+    
+    
+    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
+    
+    <category term="wx" scheme="https://yq6668.github.io/tags/wx/"/>
     
   </entry>
   
