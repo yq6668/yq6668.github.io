@@ -345,7 +345,7 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
-        <tag>react-router</tag>
+        <tag>React-Router</tag>
       </tags>
   </entry>
   <entry>
@@ -426,6 +426,88 @@
         <tag>JavaScript</tag>
         <tag>node</tag>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>react如何渲染富文本内容</title>
+    <url>/2021/12/16/react%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E5%AF%8C%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9/</url>
+    <content><![CDATA[<h2 id="react如何渲染富文本内容"><a href="#react如何渲染富文本内容" class="headerlink" title="react如何渲染富文本内容"></a>react如何渲染富文本内容</h2><p>在react中，通过富文本编辑器进行操作后的内容，会保留原有的标签样式，并不能正确展示。</p>
+<p>方法如下：</p>
+<figure class="highlight scala"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="type">React</span>, &#123; <span class="type">Component</span> &#125; from <span class="symbol">&#x27;reac</span>t&#x27;;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  constructor()&#123;</span><br><span class="line">    <span class="keyword">super</span>()</span><br><span class="line">    <span class="keyword">this</span>.state=&#123;</span><br><span class="line">      article:<span class="string">&quot;&lt;div&gt;我是富文本内容&lt;/div&gt;&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div dangerouslySetInnerHTML=&#123;&#123;__html:<span class="keyword">this</span>.state.article&#125;&#125;&gt;&lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">export <span class="keyword">default</span> <span class="type">App</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>.gitignore不起作用</title>
+    <url>/2021/09/17/gitignore%E4%B8%8D%E8%B5%B7%E4%BD%9C%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="gitignore不起作用"><a href="#gitignore不起作用" class="headerlink" title=".gitignore不起作用"></a>.gitignore不起作用</h2><p>当我们使用git提交的时候，有时会发现”.gitignore”文件不起作用，但是里面的内容和格式都是正确的。</p>
+<p>这是因为没有清除之前的缓存，导致不会再次执行修改后的”.gitignore”文件。</p>
+<p>解决方法：</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">清空git缓存</span><br><span class="line">git rm -r <span class="comment">--cached .</span></span><br><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git <span class="keyword">commit</span> -m <span class="string">&#x27;update .gitignore&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>问题解决。</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ts声明全局变量</title>
+    <url>/2022/01/17/ts%E5%A3%B0%E6%98%8E%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[<h2 id="ts声明全局变量"><a href="#ts声明全局变量" class="headerlink" title="ts声明全局变量"></a>ts声明全局变量</h2><p>当我们把声明统一放在一个文件夹中的时候，每个页面要使用时都必须引入声明文件，非常的不方便。</p>
+<p>这时我们可以使用命名空间来声明全局变量，这样就不需要引入：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//type.d.ts</span></span><br><span class="line">declare namespace TYPE &#123;</span><br><span class="line">    type students = &#123;</span><br><span class="line">        <span class="attr">id</span>: number,</span><br><span class="line">        <span class="attr">name</span>: string,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//index.ts</span></span><br><span class="line"><span class="comment">//import &#123;students&#125; from &quot;type.d.ts&quot; 现在不需要引入声明文件</span></span><br><span class="line"><span class="keyword">const</span> obj:TYPE.students=&#123;</span><br><span class="line">    <span class="attr">id</span>:<span class="number">1</span>,</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&#x27;xx&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue-router的高级路由匹配</title>
+    <url>/2021/10/16/vue-router%E7%9A%84%E9%AB%98%E7%BA%A7%E8%B7%AF%E7%94%B1%E5%8C%B9%E9%85%8D/</url>
+    <content><![CDATA[<h2 id="Vue-Router-高级路由匹配"><a href="#Vue-Router-高级路由匹配" class="headerlink" title="Vue-Router 高级路由匹配"></a>Vue-Router 高级路由匹配</h2><p>1、基础常见的全路径匹配，必须是等于才匹配</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;path:<span class="string">&#x27;/&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、动态路径，”/params/foo/bar” 通过$route.params获取{ { foo: ‘foo’, bar: ‘bar’ } }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;path:<span class="string">&#x27;/params/:foo/:bar&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、最后一位路径可有可无，”/optional-params”、”/optional-params/foo”，通过$route.params获取{ { foo: ‘foo’ } }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;path:<span class="string">&#x27;/optional-params/:foo?&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>4、一个参数后面可以跟一个括号中的正则表达式模式，限制该位置路劲的值类型，只有当 :id 全部为数字时，才会匹配此路由，“/params-with-regex/123”，通过$route.params获取{ { id: ‘123’ } }</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">&#123;path:&#x27;/params-<span class="keyword">with</span>-regex/:<span class="built_in">id</span>(\\d+)&#x27;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5、星号可以匹配任何东西，”/asterisk/foo”、”/asterisk/abc”、”/asterisk/123”……</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;path:<span class="string">&#x27;/asterisk/*&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>6、通过用括号包裹并添加“？”来使路径的一部分成为可选的，”/optional-group/bar”、”/optional-group/foo/bar”</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line">&#123;path:&#x27;/optional-group/(<span class="name">foo/</span>)?bar&#x27;&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
 </search>
