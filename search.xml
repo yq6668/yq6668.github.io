@@ -633,7 +633,7 @@
   </entry>
   <entry>
     <title>HTML中清除浮动带来的影响</title>
-    <url>/2021/02/06/HTML%E4%B8%AD%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%BD%B1%E5%93%8D/</url>
+    <url>/2021/08/06/HTML%E4%B8%AD%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%BD%B1%E5%93%8D/</url>
     <content><![CDATA[<h2 id="HTML中清除浮动带来的影响"><a href="#HTML中清除浮动带来的影响" class="headerlink" title="HTML中清除浮动带来的影响"></a>HTML中清除浮动带来的影响</h2><p>清除浮动带来的影响有两种方法：</p>
 <p>1、利用clear属性</p>
 <p>2、利用after伪类</p>

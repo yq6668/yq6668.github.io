@@ -305,6 +305,30 @@
   </entry>
   
   <entry>
+    <title>HTML中清除浮动带来的影响</title>
+    <link href="https://yq6668.github.io/2021/08/06/HTML%E4%B8%AD%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%BD%B1%E5%93%8D/"/>
+    <id>https://yq6668.github.io/2021/08/06/HTML%E4%B8%AD%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%BD%B1%E5%93%8D/</id>
+    <published>2021-08-06T01:59:40.000Z</published>
+    <updated>2022-02-18T02:11:28.008Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;HTML中清除浮动带来的影响&quot;&gt;&lt;a href=&quot;#HTML中清除浮动带来的影响&quot; class=&quot;headerlink&quot; title=&quot;HTML中清除浮动带来的影响&quot;&gt;&lt;/a&gt;HTML中清除浮动带来的影响&lt;/h2&gt;&lt;p&gt;清除浮动带来的影响有两种方法：&lt;/p&gt;
+&lt;p&gt;1、利用clear属性&lt;/p&gt;
+&lt;p&gt;2、利用after伪类&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Css" scheme="https://yq6668.github.io/categories/Css/"/>
+    
+    
+    <category term="Html" scheme="https://yq6668.github.io/tags/Html/"/>
+    
+    <category term="Css" scheme="https://yq6668.github.io/tags/Css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>fetch-cookie</title>
     <link href="https://yq6668.github.io/2021/07/23/fetch-cookie/"/>
     <id>https://yq6668.github.io/2021/07/23/fetch-cookie/</id>
@@ -455,26 +479,6 @@
     
     
     <category term="canvas" scheme="https://yq6668.github.io/tags/canvas/"/>
-    
-    <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>date格式化</title>
-    <link href="https://yq6668.github.io/2021/06/08/date%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
-    <id>https://yq6668.github.io/2021/06/08/date%E6%A0%BC%E5%BC%8F%E5%8C%96/</id>
-    <published>2021-06-08T12:29:56.000Z</published>
-    <updated>2022-02-14T01:49:52.832Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;1-格式化日期对象&quot;&gt;&lt;a href=&quot;#1-格式化日期对象&quot; class=&quot;headerlink&quot; title=&quot;1. 格式化日期对象&quot;&gt;&lt;/a&gt;1. 格式化日期对象&lt;/h2&gt;&lt;p&gt;格式化日期对象，返回yyyy-MM-dd HH:mm:ss的形式&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;formatDate&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;d&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//如果date不是日期对象，返回&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!date &lt;span class=&quot;keyword&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; year = d.getFullYear(),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      month = d.getMonth() + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      date = d.getDate(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      hour = d.getHours(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      minute = d.getMinutes(), &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      second = d.getSeconds();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  month = month &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + month : month;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  date = date &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + date : date;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  hour = hour &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + hour : hour;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  minute = minute &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + minute:minute;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  second = second &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&amp;#x27;0&amp;#x27;&lt;/span&gt; + second:second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; year + &lt;span class=&quot;string&quot;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; + month + &lt;span class=&quot;string&quot;&gt;&amp;#x27;-&amp;#x27;&lt;/span&gt; + date + &lt;span class=&quot;string&quot;&gt;&amp;#x27; &amp;#x27;&lt;/span&gt; + hour + &lt;span class=&quot;string&quot;&gt;&amp;#x27;:&amp;#x27;&lt;/span&gt; + minute + &lt;span class=&quot;string&quot;&gt;&amp;#x27;:&amp;#x27;&lt;/span&gt; + second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JavaScript" scheme="https://yq6668.github.io/categories/JavaScript/"/>
-    
     
     <category term="JavaScript" scheme="https://yq6668.github.io/tags/JavaScript/"/>
     
